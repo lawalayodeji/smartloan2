@@ -1,0 +1,52 @@
+{% extends "voidcoin_base.html" %}
+{% block title %}Transactions{% endblock title %}
+{% block introduction %}{% endblock introduction %}
+{% load chain_templatetags %}
+
+{% block content_content %}
+
+<h1>Transactions on the blockchain</h1>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/myblock/">Home</a></li>
+        <li class="breadcrumb-item active">Transactions on the blockchain</li>
+    </ol>
+</nav>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <caption>Transactions on the blockchain</caption>
+            <tr>
+                <th>S/No.</th>
+                <th>Amount</th>
+                <th>Sender</th>
+                <th>Recipient</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for transaction in transactions %}
+
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ transaction.amount }}</td>
+                <td title="{{ transaction.sender_address }}">{{ transaction.sender_address|truncatechars:10 }}</td>
+                <td title="{{ transaction.recipient_address }}">{{ transaction.recipient_address|truncatechars:10 }}</td>
+            </tr>
+        {% empty %}
+            <p>No transactions made yet</p>
+        {% endfor %}
+        <tr>
+            <td>Sum</td>
+            <td>{{ transactions|sum_amounts }}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock content_content %}
+{% block footer %}{% endblock footer %}
+

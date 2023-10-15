@@ -1,0 +1,210 @@
+body {
+    padding-top: 4.2rem;
+  }
+  
+  /*NAVIGATION*/
+  
+  /* fix nav items scrolling in small screens */
+  
+  @media (min-width: 300px) {
+      .navbar-collapse.navcontent.collapse.show {
+      max-height:540px !important;
+      overflow-y:scroll !important;
+      overflow-x:hidden !important;
+      }
+  }
+  
+  .navbar-brand {
+      font-size: 28px;
+  }
+  ul.righthand-navigation {
+      padding: 0;
+      margin-right: 8rem;
+  }
+  
+  /*GENERIC ELEMENTS*/
+  
+  p.message-paragraph, p.key-display {
+      word-break: break-all;
+  }
+  
+  .content-block {
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 1px 3px 7px 3px #c4c7ce inset;
+    border-radius: .15rem;
+    padding-bottom: 10px;
+  }
+  
+  th {
+      white-space: nowrap;
+  }
+  
+  /*UPLOAD FORMS*/
+  
+  .upload-forms {
+    max-width:450px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem 2.75rem 1rem;
+    border: 1px solid #d7d7d7;
+    border-radius: .15rem;
+  }
+  
+  /*SITEUSER*/
+  
+  .register-forms {
+    max-width:400px;
+  }
+  
+  .register-btn {
+      width: 100%;
+      font-size: 1.25rem;
+      margin-bottom: 5rem;
+  }
+  
+  .account-management-heading {
+      background: #f2f3fb;
+      border: .6px solid midnightblue;
+      margin: .5rem 0;
+      border-radius: .15rem;
+  }
+  
+  .account-management-heading > .row > .col-sm-12 > span {
+      margin-top: .5rem;
+  }
+  
+  .administer-account {
+      border-radius: .15rem;
+  }
+  
+  /* ADD ICONS TO LOGIN FORM FIELDS */
+  
+  .form-group {
+    position: relative;
+  }
+  
+  input#id_username {
+    text-indent: 30px;
+    position: relative;
+    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+  }
+  
+  input#id_password {
+    text-indent: 30px;
+    position: relative;
+    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+  }
+  
+  .fa-user {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 25px;
+    border-right: 1px solid #ccc;
+    padding-right: 5px;
+  }
+  
+  .fa-unlock-alt {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 25px;
+    border-right: 1px solid #ccc;
+    padding-right: 5px;
+  }
+  
+  a.upload-button {
+      margin-right: .35rem;
+      margin-top: .3rem;
+  }
+  
+  .login-form {
+    max-width:350px;
+    margin:auto;
+    padding-bottom: 1rem;
+  }
+  
+  .login-btn {
+      width: 100%;
+  }
+  
+  .forgot-password-btn {
+      width: 45%;
+      margin-left: .3rem;
+  }
+  
+  .join-btn {
+      width: 45%;
+      margin-right: .3rem;
+  }
+  
+  .btn-md-span {
+    vertical-align: middle;
+    font-size: 22px;
+  }
+  
+  /*RESET PASSWORD*/
+  
+  .password-reset-conditions {
+      border: 1px solid midnightblue;
+      text-align: left;
+      border-radius: .15rem;
+  }
+  
+  /*FOOTER*/
+  
+  .pagination {
+      text-align: center;
+      font-weight: 600;
+      display: block;
+      padding: 1rem 1rem;
+      margin: .75rem 0;
+      background: #e9ecef;
+      border-radius: .15rem;
+      border: .6px solid;
+  }
+  
+  /*BUTTON ICONS*/
+  
+  a.icon-buttons, span.icon-buttons {
+    float: left;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    vertical-align: middle;
+    border: 1px solid rgba(27,31,35,0.2);
+    border-radius: 3px;
+    margin: 2px 1px;
+  }
+  
+  a.icon-buttons {
+      text-decoration: none;
+  }
+  
+  ul.messages {
+      color: green;
+      text-align: left;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  ul.errorlist {
+    /* style django errors */
+    color: red;
+    text-align: left;
+    list-style-type: none;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-control {
+      background: #fcfcfc;
+      border: 1px solid #aaa;
+      border-radius: .15rem;
+      box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+  }
+  

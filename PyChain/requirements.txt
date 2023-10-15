@@ -1,0 +1,6 @@
+django 
+pygments 
+requests 
+psycopg2 
+pycryptodome 
+

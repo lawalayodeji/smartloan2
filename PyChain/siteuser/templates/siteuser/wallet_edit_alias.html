@@ -1,0 +1,25 @@
+{% extends "voidcoin_base.html" %}
+{% block title %}Edit wallet alias{% endblock %}
+{% block introduction %}{% endblock introduction %}
+
+{% block content_content %}
+
+
+<h1>Edit wallet alias</h1>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Wallets</a></li>
+        <li class="breadcrumb-item active">Edit wallet alias</li>
+    </ol>
+</nav>
+
+<div class="container upload-forms">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary btn-sm float-right" type="submit" value="Send">Send</button>
+    </form>
+</div>
+{% endblock content_content %}

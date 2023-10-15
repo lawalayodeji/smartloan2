@@ -1,0 +1,61 @@
+import os
+import json
+
+
+class BaseDB:
+    def __init__(self):
+        self.basepath = "/Users/Owner/loan-block/PyChain\data"
+        self.filepath = "/".join((self.basepath, self.filename))
+
+    def read(self):
+        if not os.path.exists(self.filepath):
+            print(f"File {self.filepath} not available")
+            return False
+
+        with open(self.filepath, "r") as file:
+            raw = file.readline()
+
+        if len(raw) > 0:
+            data = json.loads(raw)
+        else:
+            data = []
+        return data
+
+    def write(self, item):
+        data = self.read()
+        if data:
+            data+=item
+        else:
+            data = item
+
+        with open(self.filepath, "w+") as file:
+            file.write(json.dumps(data))
+
+
+class BlockchainDB(BaseDB):
+    def __init__(self):
+        self.filename = "blockchain"
+        super().__init__()
+
+    def lastBlock(self):
+        data = self.read()
+        
+        
+        if data:
+            return ("true", len(data)) 
+        else:
+            return (None, 0)
+    def blocks(self):
+        data = self.read()
+        
+        if data:
+            return data 
+        else:
+            return None
+
+
+
+class AccountDB(BaseDB):
+    def __init__(self):
+        self.filename = "account"
+        super().__init__()
