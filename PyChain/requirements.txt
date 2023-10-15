@@ -3,4 +3,6 @@ pygments
 requests 
 psycopg2 
 pycryptodome 
-
+widget_tweaks
+bootstrap4
+mathfilters
